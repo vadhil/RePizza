@@ -43,7 +43,7 @@ function MenuItem({ pizza }) {
             <p className="text-sm">{formatCurrency(unitPrice)}</p>
           ) : (
             <p className="text-sm font-medium uppercase text-stone-500">
-              Sold out
+              Habis
             </p>
           )}
           {isInCart && <UpdateItemQuantity pizzaId={id} />}

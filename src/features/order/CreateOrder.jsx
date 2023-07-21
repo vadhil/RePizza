@@ -36,7 +36,7 @@ function CreateOrder() {
 
   const isLoadingAddress = addressStatus === 'loading';
 
-  // if (cart.length < 1) return <EmptyCart />;
+  if (cart.length < 1) return <EmptyCart />;
 
   return (
     <div className="px-4 py-6">
@@ -46,7 +46,13 @@ function CreateOrder() {
       <Form method="POST">
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Nama</label>
-          <input className="input grow" type="text" name="customer" required />
+          <input
+            className="input grow"
+            type="text"
+            name="customer"
+            defaultValue={username}
+            required
+          />
         </div>
 
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">

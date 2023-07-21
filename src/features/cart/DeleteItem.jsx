@@ -7,7 +7,7 @@ export default function DeleteItem({ pizzaId }) {
 
   return (
     <Button onClick={() => dispatch(deleteItem(pizzaId))} type="small">
-      Delete
+      hapus
     </Button>
   );
 }

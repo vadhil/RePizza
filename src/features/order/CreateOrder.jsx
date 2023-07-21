@@ -127,8 +127,8 @@ function CreateOrder() {
           />
           <Button disabled={isSubmitting} type="primary">
             {isSubmitting
-              ? 'Placing order....'
-              : `order now from ${formatCurrency(finalPrice)}`}
+              ? 'menyiapkan pesanan....'
+              : `pesan sekarang ${formatCurrency(finalPrice)}`}
           </Button>
         </div>
       </Form>

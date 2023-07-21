@@ -41,7 +41,7 @@ function Order() {
         <div className="space-x-2">
           {priority && (
             <span className="rounded-full bg-red-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-red-50">
-              Priority
+              Prioritas
             </span>
           )}
           <span className="rounded-full bg-green-500 px-3 py-1 text-sm font-semibold uppercase tracking-wide text-green-50">
@@ -53,11 +53,11 @@ function Order() {
       <div className="flex flex-wrap items-center justify-between gap-2 bg-stone-200 px-6 py-5">
         <p className="font-medium">
           {deliveryIn >= 0
-            ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
-            : 'Order should have arrived'}
+            ? `tunggu ${calcMinutesLeft(estimatedDelivery)} menit ya... 😃`
+            : 'pesanan telah siap'}
         </p>
         <p className="text-xs text-stone-500">
-          (Estimated delivery: {formatDate(estimatedDelivery)})
+          (Estimasi pengantaran: {formatDate(estimatedDelivery)})
         </p>
       </div>
 
@@ -77,15 +77,15 @@ function Order() {
 
       <div className="space-y-2 bg-stone-200 px-6 py-5">
         <p className="text-sm font-medium text-stone-600">
-          Price pizza: {formatCurrency(orderPrice)}
+          Harga Pizza: {formatCurrency(orderPrice)}
         </p>
         {priority && (
           <p className="text-sm font-medium text-stone-600">
-            Price priority: {formatCurrency(priorityPrice)}
+            Jasa Prioritas: {formatCurrency(priorityPrice)}
           </p>
         )}
         <p className="font-bold">
-          To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
+          Harga Total: {formatCurrency(orderPrice + priorityPrice)}
         </p>
       </div>
     </div>

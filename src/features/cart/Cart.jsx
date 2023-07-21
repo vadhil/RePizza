@@ -18,8 +18,6 @@ function Cart() {
   function handleClear() {
     dispatch(clearCart());
   }
-  // const cart = fakeCart;
-  console.log(cart);
 
   return (
     <div className="px-4 py-3">

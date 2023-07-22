@@ -7,11 +7,11 @@ export default function UpdateOrder({ order }) {
 
   return (
     <fetcher.Form method="PATCH" className="text-right">
-      <Button type="primary">jadikan prioritas</Button>;
+      <Button type="primary">jadikan prioritas</Button>
     </fetcher.Form>
   );
 }
-
+//? fetcher.Form, action connect in app, where do they get data?
 export async function action({ request, params }) {
   const data = { priority: true };
   await updateOrder(params.orderId, data);
